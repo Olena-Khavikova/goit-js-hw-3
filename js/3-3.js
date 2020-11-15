@@ -1,19 +1,34 @@
+// const findBestEmployee = function (employees) {
+//   "use strict";
+//   // Write code under this line
+//   const employeesList = Object.entries(employees);
+//   let bestName = "";
+//   let bestQuantityOfTasks = 0;
+//   for (let employee of employeesList) {
+//     console.table(employee);
+//     if (employee[1] > bestQuantityOfTasks) {
+//       bestName = employee[0];
+//       bestQuantityOfTasks = employee[1];
+//     }
+//   }
+//   return bestName;
+// };
+
 const findBestEmployee = function (employees) {
   "use strict";
   // Write code under this line
-  const employeesList = Object.entries(employees);
+  const employeesNames = Object.keys(employees);
   let bestName = "";
   let bestQuantityOfTasks = 0;
-  for (let employee of employeesList) {
-    console.table(employee);
-    if (employee[1] > bestQuantityOfTasks) {
-      bestName = employee[0];
-      bestQuantityOfTasks = employee[1];
+  for (let name of employeesNames) {
+     console.log(employees[name]);
+    if (employees[name] > bestQuantityOfTasks) {
+      bestName = name;
+      bestQuantityOfTasks = employees[name];
     }
   }
   return bestName;
 };
-
 // Объекты и ожидаемый результат
 const developers = {
   ann: 29,
